@@ -1,0 +1,9 @@
+Scene, Camera, Renderer is essantial parts...
+
+Object3D.position : is a Vector3 class's Object.
+some methods : 
+
+--> length() : which gives distance from the center to the Object
+--> distanceTo() : which gives distance from the camera to the Object
+--> normalize() : which takes the object to the length of 1. takes object to the distance of 1 from the center.
+--> set()       : can pass to set x,y,z
