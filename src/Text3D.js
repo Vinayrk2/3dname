@@ -10,7 +10,7 @@ const sizes = {
     width: window.innerWidth,
     height: window.innerHeight
 }
-let textName;
+let textName = "Default Text";
 window.addEventListener("load",()=>{
     textName = window.prompt("Please Enter your GF name:") == "" && "Single"
 })
