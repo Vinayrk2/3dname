@@ -10,8 +10,10 @@ const sizes = {
     width: window.innerWidth,
     height: window.innerHeight
 }
-
-const text = window.prompt("Please Enter your GF name:") == "" && "Single";
+let textName;
+window.addEventListener("load",()=>{
+    textName = window.prompt("Please Enter your GF name:") == "" && "Single"
+})
 
 window.addEventListener("resize",()=>{
     
@@ -60,8 +62,10 @@ const texture = textureLoader.load('/textures/matcaps/4.png');
 const fontLoader = new FontLoader();
 const material = new THREE.MeshMatcapMaterial({ matcap: texture});
 
-fontLoader.load('/fonts/helvetiker_regular.typeface.json',(font)=>{
-    const textGeometry = new TextGeometry(text,
+fontLoader.load('/fonts/helvetiker_regular.typeface.json',async (font)=>{
+    
+
+    const textGeometry = new TextGeometry(textName,
     {
         font:font,
         size: 0.6,
