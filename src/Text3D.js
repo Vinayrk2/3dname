@@ -11,6 +11,7 @@ const sizes = {
     height: window.innerHeight
 }
 
+const text = window.prompt("Please Enter your GF name:") == "" && "Single";
 
 window.addEventListener("resize",()=>{
     
@@ -60,7 +61,7 @@ const fontLoader = new FontLoader();
 const material = new THREE.MeshMatcapMaterial({ matcap: texture});
 
 fontLoader.load('/fonts/helvetiker_regular.typeface.json',(font)=>{
-    const textGeometry = new TextGeometry('Hello World',
+    const textGeometry = new TextGeometry(text,
     {
         font:font,
         size: 0.6,
